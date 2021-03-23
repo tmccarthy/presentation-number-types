@@ -223,9 +223,38 @@ Examples:
 
 ## Big integers
 
+--
+
+* `BigInt` in Scala
+* `BigInteger` in Java/JVM
+* `BigInt` in Javascript
+
+--
+* Use this in JS when you ought to be using an integer
+* Otherwise, for the rare case where you need arbitrary precision
+
 ---
 
 ## Rational numbers
+
+numerator / denominator
+
+---
+
+## Rational numbers
+
+--
+
+✅ Use when:
+
+* You're doing lots of division/multiplication but exactness is necessary
+
+--
+
+❌ Don't use for:
+
+* ... the hell of it
+* When you need it to be _fast_
 
 ---
 
