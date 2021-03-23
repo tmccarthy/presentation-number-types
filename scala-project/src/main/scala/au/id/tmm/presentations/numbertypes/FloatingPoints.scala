@@ -3,7 +3,7 @@ package au.id.tmm.presentations.numbertypes
 object FloatingPoints {
 
   def main(args: Array[String]): Unit = {
-    exactRepresentability()
+    signedZero()
   }
 
   private def exactRepresentability(): Unit = {
@@ -25,7 +25,7 @@ object FloatingPoints {
   }
 
   private def floatingPointErrors(): Unit = {
-    val delta: Float = 0.01f
+    val delta: Float = 0.5f
     val coefficient = 100_000
 
     var computedByLoop: Float = 0f
@@ -81,15 +81,15 @@ object FloatingPoints {
     displayExactly(0f)
     displayExactly(-0f)
     displayExactly(0f * -1f)
-//    println(0f == -0f)
-//    println(0f > -0f)
+    println(0f == -0f)
+    println(0f > -0f)
   }
 
   private def displayExactly(float: Float): Unit = {
     val exponent: Int    = math.getExponent(float)
     val significand: Int = math.round(float / math.pow(2, exponent).toFloat)
 
-    printf("%.30f (%d x 2 ^ %d)\n", float, significand, exponent)
+    printf("%.30f\n", float)
   }
 
 }

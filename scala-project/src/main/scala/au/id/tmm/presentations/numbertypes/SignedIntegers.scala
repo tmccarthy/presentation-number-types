@@ -3,7 +3,7 @@ package au.id.tmm.presentations.numbertypes
 object SignedIntegers {
 
   def main(args: Array[String]): Unit = {
-    overflows()
+    safeArithmetic()
   }
 
   private def range(): Unit = {

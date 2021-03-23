@@ -5,7 +5,7 @@ import spire.math._
 object UnsignedIntegers {
 
   def main(args: Array[String]): Unit = {
-    range()
+    zeroDivisionByZero()
   }
 
   private def range(): Unit = {
