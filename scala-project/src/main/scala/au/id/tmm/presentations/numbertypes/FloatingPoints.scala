@@ -3,15 +3,25 @@ package au.id.tmm.presentations.numbertypes
 object FloatingPoints {
 
   def main(args: Array[String]): Unit = {
-    reallyBigNumbers()
+    exactRepresentability()
   }
 
   private def exactRepresentability(): Unit = {
+    println(1f)
     displayExactly(1f)
+    println()
+    println(2f)
     displayExactly(2f)
+    println()
+    println(0.5f)
     displayExactly(0.5f)
+    println()
+    println(0.3f)
     displayExactly(0.3f)
+    println()
+    println(0.1f)
     displayExactly(0.1f)
+    println()
   }
 
   private def floatingPointErrors(): Unit = {
@@ -56,7 +66,7 @@ object FloatingPoints {
     displayExactly(Float.MaxValue + 99999999f)
   }
 
-  private def displayExactly(float: Float): Unit = printf("%.40f\n", float)
+  private def displayExactly(float: Float): Unit = printf("%.30f\n", float)
   private def displayExactly(double: Double): Unit = printf("%.40f\n", double)
 
 }

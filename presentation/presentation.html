@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number types!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      td, th {
+          border: 1px solid #dfe2e5;
+          padding: 6px 13px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+<textarea id="source">
+
+class: center, middle
+
+# Number types!
+
+---
+
+## Unsigned integers
+
+| Type name           | Number of bits | Min | Max                  |
+|---------------------|----------------|-----|----------------------|
+| `u8` or `ubyte`     | 8              | 0   | 255 (2⁸ - 1)         |
+| `u16` or `ushort`   | 16             | 0   | 65535 (2¹⁶ - 1)      |
+| `u32` or `uint`     | 32             | 0   | 4294967295 (2³² - 1) |
+| `u64` or `ulong`    | 64             | 0   | 18446744073709551615 (2⁶⁴ - 1) |
+
+--
+
+Not available in many modern programming languages
+
+---
+
+## Unsigned integers
+
+--
+
+✅ Use when:
+
+* You have a number that should never be negative
+* You are working with bytes
+
+--
+
+❌ Don't use when:
+
+* You're working with fractional amounts
+* You need to represent negative numbers
+
+--
+
+⚠️ Be careful!
+
+* Underflows can be easy to do and usually happen silently
+
+---
+
+## Signed integers
+
+| Type name           | Number of bits | Min                         | Max                           |
+|---------------------|----------------|-----------------------------|-------------------------------|
+| `i8` or `byte`      | 8              | -128 (-2⁷)                  | 127 (2⁷ - 1)                  |
+| `i16` or `short`    | 16             | -32768 (-2¹⁵)               | 32767 (2¹⁵ - 1)               |
+| `i32` or `int`      | 32             | -2147483648 (-2³¹)          | 2147483647 (2³¹ - 1)          |
+| `i64` or `long`     | 64             | -9223372036854775808 (-2⁶³) | 9223372036854775807 (2⁶³ - 1) |
+
+---
+
+## Signed integers
+
+--
+
+✅ Use when:
+
+* Most cases where you need an integer
+
+--
+
+❌ Don't use when:
+
+* You're working with fractional amounts
+* You don't want negative numbers and there are unsigned types available
+
+--
+
+⚠️ Be careful!
+
+* Overflows/underflows can sneak up on you!
+* Use a `long` type most of the time.
+* Using signed `byte` types is a pain and should be avoided if possible
+
+---
+
+class: center, middle
+
+# Thanks for listening!
+
+</textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
