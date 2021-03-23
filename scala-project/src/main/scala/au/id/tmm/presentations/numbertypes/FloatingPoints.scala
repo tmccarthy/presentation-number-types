@@ -60,13 +60,36 @@ object FloatingPoints {
     println(Float.NaN == Float.NaN)
   }
 
+  private def precisions(): Unit = {
+    displayExactly(1f)
+    displayExactly(math.nextUp(1f))
+    println()
+
+    // 1 billion
+    displayExactly(1000000000f)
+    displayExactly(math.nextUp(1000000000f))
+    println()
+  }
+
   private def reallyBigNumbers(): Unit = {
     displayExactly(Float.MaxValue)
     displayExactly(Float.MaxValue + 1)
     displayExactly(Float.MaxValue + 99999999f)
   }
 
-  private def displayExactly(float: Float): Unit = printf("%.30f\n", float)
-  private def displayExactly(double: Double): Unit = printf("%.40f\n", double)
+  private def signedZero(): Unit = {
+    displayExactly(0f)
+    displayExactly(-0f)
+    displayExactly(0f * -1f)
+//    println(0f == -0f)
+//    println(0f > -0f)
+  }
+
+  private def displayExactly(float: Float): Unit = {
+    val exponent: Int    = math.getExponent(float)
+    val significand: Int = math.round(float / math.pow(2, exponent).toFloat)
+
+    printf("%.30f (%d x 2 ^ %d)\n", float, significand, exponent)
+  }
 
 }

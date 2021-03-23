@@ -101,6 +101,84 @@ Not available in many modern programming languages
 * Overflows/underflows can sneak up on you!
 * Use a `long` type most of the time.
 * Using signed `byte` types is a pain and should be avoided if possible
+* Illegal operations (division by zero) usually cause exceptions
+
+---
+
+## Floating-point numbers
+
+--
+
+<span style="color:#F18F01">sign</span> ⨯ <span style="color:#048BA8">fraction</span> ⨯ <span style="color:grey">2</span> <sup style="color:#91171F">exponent</sup>
+
+--
+
+Examples:
+
+* `0` = <span style="color:#F18F01">1</span> ⨯ <span style="color:#048BA8">0</span> ⨯ <span style="color:grey">2</span> <sup style="color:#91171F">0</sup>
+* `1` = <span style="color:#F18F01">1</span> ⨯ <span style="color:#048BA8">1</span> ⨯ <span style="color:grey">2</span> <sup style="color:#91171F">0</sup>
+* `-4` = <span style="color:#F18F01">-1</span> ⨯ <span style="color:#048BA8">1</span> ⨯ <span style="color:grey">2</span> <sup style="color:#91171F">2</sup> (sorta)
+* `0.5` = <span style="color:#F18F01">1</span> ⨯ <span style="color:#048BA8">1</span> ⨯ <span style="color:grey">2</span> <sup style="color:#91171F">-1</sup>
+
+--
+* `0.1` = ???
+
+---
+
+## Floating-point numbers
+
+| Type name           | Exponent length | Fraction length | Sign length | Total length |
+|---------------------|-----------------|-----------------|-------------|--------------|
+| `single` (`float`)  | 8 bits          | 23 bits         | 1 bit       | 32 bits      |
+| `double`            | 11 bits         | 52 bits         | 1 bit       | 64 bits      |
+
+The Javascript/json `Number` type is `double`.
+
+--
+
+![](images/1180px-Float_example.svg.png)
+
+---
+
+## Floating-point numbers
+
+--
+
+✅ Use when:
+
+* Data for real-world measurements (temperature, length, mass etc)
+* When you need _really fast_ calculations
+
+--
+
+❌ Don't use for:
+
+* Numbers are always integers
+* Cases where the exact value is important (money)
+* User-provided input where the exact value is important (percentage yield in RCA)
+
+--
+
+⚠️ Be careful!
+
+* Sometimes (eg Javascript) you have no other options, so be careful!
+* Floating point errors can make equality checks fraught
+* `NaN` can be unintuitive
+* Sometimes you need to lookout for `-0`
+* Overflows don't throw exceptions
+* For very big values, floats don't behave how you'd expect
+
+---
+
+## Decimals
+
+---
+
+## Big integers
+
+---
+
+## Rational numbers
 
 ---
 
