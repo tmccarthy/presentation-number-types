@@ -172,6 +172,53 @@ The Javascript/json `Number` type is `double`.
 
 ## Decimals
 
+* `BigDecimal` in Java/Scala/JVM
+* `Decimal` in Python
+
+--
+
+<span style="color:#F18F01">sign</span> ⨯ <span style="color:#048BA8">fraction</span> ⨯ <span style="color:grey">10</span> <sup style="color:#91171F">exponent</sup>
+
+--
+
+Examples:
+
+* `0` = <span style="color:#F18F01">1</span> ⨯ <span style="color:#048BA8">0</span> ⨯ <span style="color:grey">10</span> <sup style="color:#91171F">0</sup>
+* `1` = <span style="color:#F18F01">1</span> ⨯ <span style="color:#048BA8">1</span> ⨯ <span style="color:grey">10</span> <sup style="color:#91171F">0</sup>
+* `-4` = <span style="color:#F18F01">-1</span> ⨯ <span style="color:#048BA8">4</span> ⨯ <span style="color:grey">10</span> <sup style="color:#91171F">0</sup>
+* `0.5` = <span style="color:#F18F01">1</span> ⨯ <span style="color:#048BA8">5</span> ⨯ <span style="color:grey">10</span> <sup style="color:#91171F">-1</sup>
+* `1,234,000` = <span style="color:#F18F01">1</span> ⨯ <span style="color:#048BA8">1234</span> ⨯ <span style="color:grey">10</span> <sup style="color:#91171F">3</sup>
+* `0.333333` = <span style="color:#F18F01">1</span> ⨯ <span style="color:#048BA8">333333</span> ⨯ <span style="color:grey">10</span> <sup style="color:#91171F">-6</sup>
+
+--
+* ⅓ = ???
+* ᴨ = ???
+
+---
+
+## Decimals
+
+--
+
+✅ Use when:
+
+* Money!
+* Human-input cases (eg percentage yield in RCA)
+
+--
+
+❌ Don't use for:
+
+* ... the hell of it
+* When you need it to be _really fast_
+
+--
+
+⚠️ Be careful!
+
+* Just because Decimal can represent some numbers that floats can't, doesn't mean you don't have to watch out for errors, it just means the errors are more familiar to us as people
+* Depending on your platform, equality is scale-dependent
+
 ---
 
 ## Big integers
