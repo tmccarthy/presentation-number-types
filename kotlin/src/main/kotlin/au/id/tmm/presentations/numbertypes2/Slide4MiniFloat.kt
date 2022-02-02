@@ -2,7 +2,7 @@ package au.id.tmm.presentations.numbertypes2
 
 import au.id.tmm.presentations.numbertypes2.types.MiniFloat
 
-object Slide3MiniFloat {
+object Slide4MiniFloat {
 
   @JvmStatic
   fun main(args: Array<String>) {
@@ -11,7 +11,6 @@ object Slide3MiniFloat {
     division()
     divisionByZero()
     divisionZeroByZero()
-    floatingPointError()
     imprecisionTooLow()
     imprecisionTooHigh()
   }
@@ -36,10 +35,6 @@ object Slide3MiniFloat {
 
   private fun divisionZeroByZero() {
     println(MiniFloat.from(0) / MiniFloat.from(0))
-  }
-
-  private fun floatingPointError() {
-    println(MiniFloat.from(2) / MiniFloat.from(3))
   }
 
   private fun imprecisionTooLow() {
