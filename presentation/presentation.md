@@ -91,6 +91,19 @@
 
 # Floating point numbers
 
+<div data-marpit-fragment/>
+
+## `MiniFloat`
+
+<span style="color:#F18F01">sign</span> ⨯ <span style="color:#048BA8">fraction</span> ⨯ <span style="color:grey">2</span> <sup style="color:#91171F">exponent</sup>
+
+* Fraction between 2 and -2
+* Exponent between -1 and 2
+
+---
+
+# Floating point numbers
+
 ![](images/FloatingPointPrecisionAugmented.png)
 
 ---
@@ -99,15 +112,25 @@
 
 ### ✅ Good when
 
-* 
+* Data for real-world measurements (temperature, length, mass etc)
+* When you need _really fast_ calculations
 
 ### ❌ Avoid when
 
-* 
+* Numbers are always integers
+* Cases where the exact value is important and can't be expressed by a float (money)
+
+---
+
+# Floating point numbers
 
 ### ⚠️ Watch out!
 
-* 
+* Sometimes (eg Javascript) you have no other options, so be careful!
+* `NaN` can be unintuitive
+* Sometimes you need to lookout for `-0`
+* Overflows don't throw exceptions
+* For very big values, floats don't behave how you'd expect
 
 ---
 

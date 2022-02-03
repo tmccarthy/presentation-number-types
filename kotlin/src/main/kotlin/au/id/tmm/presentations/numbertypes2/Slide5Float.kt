@@ -7,15 +7,20 @@ object Slide5Float {
 
   @JvmStatic
   fun main(args: Array<String>) {
-    imprecisionTooLow()
-    imprecisionTooHigh()
-    nextUp()
+    countAsFarAsYouCan()
   }
 
-  private fun imprecisionTooLow() {
-  }
-
-  private fun imprecisionTooHigh() {
+  private fun countAsFarAsYouCan() {
+    var counter: Float = 0f
+    for (i in 1L..20_000_000L) {
+      val newValue = counter + 1f
+      if (newValue == counter) {
+        displayExactly(counter)
+        break
+      } else {
+        counter = newValue
+      }
+    }
   }
 
   private fun nextUp() {
