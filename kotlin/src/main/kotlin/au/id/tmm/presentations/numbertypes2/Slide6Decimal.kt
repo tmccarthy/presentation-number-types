@@ -1,6 +1,11 @@
 package au.id.tmm.presentations.numbertypes2
 
-class Slide6Decimal {
+import java.math.BigDecimal
 
+object Slide6Decimal {
+
+  @JvmStatic
+  fun main(args: Array<String>) {
+  }
 
 }
