@@ -1,4 +1,7 @@
 package au.id.tmm.presentations.numbertypes2
 
-class Slide7Rational {
+object Slide7Rational {
+  @JvmStatic
+  fun main(args: Array<String>) {
+  }
 }
