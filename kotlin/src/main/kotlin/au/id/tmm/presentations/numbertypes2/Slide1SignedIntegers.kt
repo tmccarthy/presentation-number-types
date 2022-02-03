@@ -4,6 +4,7 @@ object Slide1SignedIntegers {
 
   @JvmStatic
   fun main(args: Array<String>) {
+    println(0 / 0)
   }
 
 }
