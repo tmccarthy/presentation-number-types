@@ -150,22 +150,6 @@
 
 ---
 
-# Decimals
-
-### ✅ Good when
-
-*
-
-### ❌ Avoid when
-
-*
-
-### ⚠️ Watch out!
-
-*
-
----
-
 # Rational numbers
 
 $$\frac{numerator}{denominator}$$
