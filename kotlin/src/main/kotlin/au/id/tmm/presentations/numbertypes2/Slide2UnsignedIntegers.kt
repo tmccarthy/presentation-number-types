@@ -4,28 +4,32 @@ object Slide2UnsignedIntegers {
 
   @JvmStatic
   fun main(args: Array<String>) {
-    // overflow()
-    // underflow()
-    // exactAddition()
-    // division()
-    // divisionByZero()
-    // divisionZeroByZero()
+    range()
+    overflows()
+    safeArithmetic()
+    division()
+    divisionByZero()
+    divisionZeroByZero()
   }
 
-  private fun overflow() {
+  private fun range() {
+    println(UInt.MIN_VALUE)
+    println(UInt.MAX_VALUE)
+  }
+
+  private fun overflows() {
     println(UInt.MAX_VALUE + 1u)
+    println(UInt.MIN_VALUE - 1u)
   }
 
-  private fun underflow() {
-    println(0u - 1u)
-  }
-
-  private fun exactAddition() {
-    TODO() // 🤷
+  private fun safeArithmetic() {
+    // TODO 🤷
+    // println(StrictMath.addExact(1u, 1u))
+    // println(StrictMath.addExact(UInt.MAX_VALUE, 1u))
   }
 
   private fun division() {
-    println(4u / 2u)
+    println(2u / 2u)
     println(2u / 3u)
   }
 

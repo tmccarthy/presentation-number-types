@@ -4,6 +4,17 @@
 
 # Signed integers
 
+| Type name           | Number of bits | Min                         | Max                           |
+|---------------------|----------------|-----------------------------|-------------------------------|
+| `i8` or `byte`      | 8              | -128 (-2⁷)                  | 127 (2⁷ - 1)                  |
+| `i16` or `short`    | 16             | -32768 (-2¹⁵)               | 32767 (2¹⁵ - 1)               |
+| `i32` or `int`      | 32             | -2147483648 (-2³¹)          | 2147483647 (2³¹ - 1)          |
+| `i64` or `long`     | 64             | -9223372036854775808 (-2⁶³) | 9223372036854775807 (2⁶³ - 1) |
+
+---
+
+# Signed integers
+
 ### ✅ Good when
 
 * Working with whole numbers
@@ -17,6 +28,17 @@
 
 * Pick your range carefully, err on the large side
 * Use `addExact` if you need to be careful about overflows and underflows
+
+---
+
+# Unsigned integers
+
+| Type name           | Number of bits | Min | Max                  |
+|---------------------|----------------|-----|----------------------|
+| `u8` or `ubyte`     | 8              | 0   | 255 (2⁸ - 1)         |
+| `u16` or `ushort`   | 16             | 0   | 65535 (2¹⁶ - 1)      |
+| `u32` or `uint`     | 32             | 0   | 4294967295 (2³² - 1) |
+| `u64` or `ulong`    | 64             | 0   | 18446744073709551615 (2⁶⁴ - 1) |
 
 ---
 
@@ -46,14 +68,24 @@
 
 <span style="color:#F18F01">sign</span> ⨯ <span style="color:#048BA8">fraction</span> ⨯ <span style="color:grey">2</span> <sup style="color:#91171F">exponent</sup>
 
+<div data-marpit-fragment/>
+
+| Type name                   | Exponent length | Fraction length | Sign length | Total length |
+|-----------------------------|-----------------|-----------------|-------------|--------------|
+| single precision (`float`)  | 8 bits          | 23 bits         | 1 bit       | 32 bits      |
+| double precision (`double`) | 11 bits         | 52 bits         | 1 bit       | 64 bits      |
+
+![](images/1180px-Float_example.svg.png)
+
+---
+
+# Floating point numbers
+
 * `0` = <span style="color:#F18F01">1</span> ⨯ <span style="color:#048BA8">0</span> ⨯ <span style="color:grey">2</span> <sup style="color:#91171F">0</sup>
 * `1` = <span style="color:#F18F01">1</span> ⨯ <span style="color:#048BA8">1</span> ⨯ <span style="color:grey">2</span> <sup style="color:#91171F">0</sup>
 * `-4` = <span style="color:#F18F01">-1</span> ⨯ <span style="color:#048BA8">1</span> ⨯ <span style="color:grey">2</span> <sup style="color:#91171F">2</sup> (sorta)
 * `0.5` = <span style="color:#F18F01">1</span> ⨯ <span style="color:#048BA8">1</span> ⨯ <span style="color:grey">2</span> <sup style="color:#91171F">-1</sup>
-
-<div data-marpit-fragment>
-
-![](images/1180px-Float_example.svg.png)
+* `0.1` = ???
 
 ---
 

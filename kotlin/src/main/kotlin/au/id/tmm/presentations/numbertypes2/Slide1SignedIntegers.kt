@@ -4,12 +4,12 @@ object Slide1SignedIntegers {
 
   @JvmStatic
   fun main(args: Array<String>) {
-    // range()
-    // overflows()
-    // safeArithmetic()
-    // division()
-    // divisionByZero()
-    // divisionZeroByZero()
+    range()
+    overflows()
+    safeArithmetic()
+    division()
+    divisionByZero()
+    divisionZeroByZero()
   }
 
   private fun range() {
@@ -19,7 +19,7 @@ object Slide1SignedIntegers {
 
   private fun overflows() {
     println(Int.MAX_VALUE + 1)
-    println(0 - 1)
+    println(Int.MIN_VALUE - 1)
   }
 
   private fun safeArithmetic() {
